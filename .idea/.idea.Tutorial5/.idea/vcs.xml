@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="VcsDirectoryMappings">
+    <mapping directory="$PROJECT_DIR$/../APBD999999/LOG" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../APBD999999/WebAPI" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../Containers" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../MySolution" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../TavernSystem.API" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../Tutorial1" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../Tutorial4" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../preparationfortheTest" vcs="Git" />
+  </component>
+</project>

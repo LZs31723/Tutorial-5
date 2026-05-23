@@ -30,7 +30,7 @@ public class DbService : IDbService
             .ToListAsync();
     }
 
-public async Task<IEnumerable<PcComponentDto>> GetPcComponents(int id)
+    public async Task<IEnumerable<PcComponentDto>> GetPcComponents(int id)
     {
         var pcExists = await _context.PCs.AnyAsync(e => e.Id == id);
         if (!pcExists)
@@ -45,15 +45,11 @@ public async Task<IEnumerable<PcComponentDto>> GetPcComponents(int id)
                 Code = pc.Component.Code,
                 Name = pc.Component.Name,
                 Description = pc.Component.Description,
-
-                ManufacturerAbbreviation = _context.ComponentManufacturers
-                    .First(m => m.Id == pc.Component.ComponentManufacturersId).Abbreviation,
-
-                TypeAbbreviation = _context.ComponentTypes
-                    .First(t => t.Id == pc.Component.ComponentTypesId).Abbreviation,
-
+                ManufacturerAbbreviation = pc.Component.ComponentManufactures.Abbreviation,
+                TypeAbbreviation = pc.Component.ComponentType.Abbreviation,
                 Amount = pc.Amount
-            }).ToListAsync();
+            })
+            .ToListAsync();
     }
 
     public async Task<PcGet> CreatePcAsync(PcCreate dto)
